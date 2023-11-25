@@ -1,0 +1,1 @@
+<a href="index.html"><img src="{{asset('images/resources/logo-1.png')}}" alt="" /></a>
