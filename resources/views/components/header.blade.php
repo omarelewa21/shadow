@@ -27,7 +27,6 @@
                                 <li class="dropdown">
                                     <a href="#">Services</a>
                                     <ul>
-                                        <li><a href="services.html">Services</a></li>
                                         <li>
                                             <a href="agriculture-services.html">Agriculture Services</a>
                                         </li>
@@ -68,3 +67,9 @@
         </nav>
     </div>
 </header>
+
+<div class="stricky-header stricky-header--one stricked-menu main-menu">
+    <div class="sticky-header__content"></div>
+    <!-- /.sticky-header__content -->
+</div>
+<!-- /.stricky-header -->

@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shadow</title>
+    <title>{{ $title }}</title>
     <!-- Favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{asset('images/favicons/apple-touch-icon.png')}}" />
     <link rel="icon" type="image/png" sizes="32x32" href="{{asset('images/favicons/favicon-32x32.png')}}" />
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/favicons/favicon-16x16.png')}}" />
     <link rel="manifest" href="{{asset('images/favicons/site.webmanifest')}}" />
-    <meta name="description" content="Baosh HTML 5 Template " />
+    <meta name="description" content="Shadow For Technical Solutions" />
 
     <!-- Fonts -->
     <link
@@ -38,11 +38,33 @@
 </head>
 
 <body>
-    
+    <!-- Start Preloader -->
+    <div class="loader-wrap">
+        <div class="preloader">
+            <div class="preloader-close">x</div>
+            <div id="handle-preloader" class="handle-preloader">
+                <div class="animation-preloader">
+                    <div class="spinner"></div>
+                    <div class="txt-loading">
+                        @foreach($appName as $char)
+                            <span data-text-preloader="{{$char}}" class="letters-loading">{{$char}}</span>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader -->
 
+    <div class="page-wrapper">
 
+        <x-sidebar></x-sidebar>
+        <x-header></x-header>
+            {{ $slot }}
+        <x-footer></x-footer>
 
-
+    </div>
+    <!-- /.page-wrapper -->
 
     <script src="{{asset('vendors/jquery/jquery-3.6.0.min.js')}}" ></script>
     <script src="{{asset('vendors/bootstrap/js/bootstrap.bundle.min.js')}}" ></script>

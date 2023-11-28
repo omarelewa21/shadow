@@ -9,9 +9,7 @@
             <div class="sidebar-textwidget">
                 <div class="sidebar-info-contents">
                     <div class="content-inner">
-                        <div class="logo">
-                            <a href="index.html"><img src="{{asset('images/resources/logo-1.png')}}" alt="" /></a>
-                        </div>
+                        <x-logo></x-logo>
                         <div class="content-box">
                             <h4>About Us</h4>
                             <div class="inner-text">
