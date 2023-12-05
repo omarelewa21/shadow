@@ -75,7 +75,7 @@
                         & bold solutions for your <br> business <span>growth</span></h2>
                 </div>
                 <div class="btn-box">
-                    <a class="thm-btn" href="contact.html">
+                    <a class="thm-btn" href="{{route('contact.index')}}">
                         <span class="txt">Explore More</span>
                         <span class="bdrl"></span>
                         <span class="bdrr"></span>
@@ -124,7 +124,7 @@
                                     we try to best consultations</p>
 
                                 <div class="btn-box">
-                                    <a class="thm-btn" href="contact.html">
+                                    <a class="thm-btn" href="{{route('contact.index')}}">
                                         <span class="txt">View More</span>
                                         <span class="bdrl"></span>
                                         <span class="bdrr"></span>
@@ -502,7 +502,7 @@
                 </div>
 
                 <div class="btn-box">
-                    <a class="thm-btn" href="contact.html">
+                    <a class="thm-btn" href="{{route('contact.index')}}">
                         <span class="txt">Client Feedback</span>
                         <span class="bdrl"></span>
                         <span class="bdrr"></span>
@@ -793,7 +793,7 @@
                         </div>
 
                         <div class="btn-box">
-                            <a class="thm-btn" href="contact.html">
+                            <a class="thm-btn" href="{{route('contact.index')}}">
                                 <span class="txt">Send A Message</span>
                                 <span class="bdrl"></span>
                                 <span class="bdrr"></span>

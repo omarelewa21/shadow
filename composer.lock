@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d5ab76698bb7a61a49a051a424b17db",
+    "content-hash": "d1e53451f89876ad14446d9f3277a7a9",
     "packages": [
         {
             "name": "backpack/basset",
@@ -6393,6 +6393,76 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "ziming/json-field-for-backpack",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ziming/json-field-for-backpack.git",
+                "reference": "e5c29a8b03d2596b69d3a17998fa718bda16ca93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ziming/json-field-for-backpack/zipball/e5c29a8b03d2596b69d3a17998fa718bda16ca93",
+                "reference": "e5c29a8b03d2596b69d3a17998fa718bda16ca93",
+                "shasum": ""
+            },
+            "require": {
+                "backpack/crud": "^4.1.0|^5.0|^6.0",
+                "ext-json": "*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Ziming\\JsonFieldForBackpack\\AddonServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ziming\\JsonFieldForBackpack\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ziming",
+                    "email": "ziming.opensource@gmail.com"
+                },
+                {
+                    "name": "vesper8"
+                },
+                {
+                    "name": "stephanus-stuff"
+                }
+            ],
+            "description": "A Json Editor Field for Backpack",
+            "homepage": "https://github.com/ziming/json-field-for-backpack",
+            "keywords": [
+                "Backpack for Laravel",
+                "addon",
+                "admin panel",
+                "backpack",
+                "field",
+                "json",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/ziming/json-field-for-backpack/issues",
+                "source": "https://github.com/ziming/json-field-for-backpack/tree/1.2.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ziming",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-11-17T14:16:43+00:00"
         }
     ],
     "packages-dev": [

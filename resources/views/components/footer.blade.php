@@ -10,7 +10,7 @@
 
                 <div class="footer-one__contact">
                     <div class="footer-one__contact-bdr"
-                        style="background-image: url({{asset('images/footer/footer-v1-img1.jpg')}});"></div>
+                        style="background-image: {{$companyInfo->company_logo}};"></div>
                     <ul>
                         <li>
                             <div class="icon-box">
@@ -19,7 +19,7 @@
 
                             <div class="text-box">
                                 <p>Call anytime</p>
-                                <h3><a href="tel:98210009630">+ 9821 (000) - 9630</a></h3>
+                                <h3><a href="tel:{{$companyInfo->company_phone}}">{{$companyInfo->company_phone}}</a></h3>
                             </div>
                         </li>
 
@@ -30,7 +30,7 @@
 
                             <div class="text-box">
                                 <p>Send email</p>
-                                <h3><a href="mailto:yourmail@email.com">baosh@company.com</a></h3>
+                                <h3><a href="mailto:{{$companyInfo->company_email}}">{{$companyInfo->company_email}}</a></h3>
                             </div>
                         </li>
 
@@ -41,7 +41,7 @@
 
                             <div class="text-box">
                                 <p>Visit Office</p>
-                                <h3>27 Division St, New York</h3>
+                                <h3>{{$companyInfo->company_address}}</h3>
                             </div>
                         </li>
                     </ul>
@@ -58,11 +58,9 @@
 
                 <div class="footer-one__social-links">
                     <ul>
-                        <li><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li><a href="#"><span class="icon-google-plus-logo"></span></a></li>
-                        <li><a href="#"><span class="icon-pinterest"></span></a></li>
-                        <li><a href="#"><span class="icon-wifi"></span></a></li>
+                        @foreach($companyInfo->socialLinks() as $socialLink)
+                            <li><a href="{{$socialLink['link']}}"><span class="{{$socialLink['icon']}}"></span></a></li>
+                        @endforeach
                     </ul>
                     <div class="border-box"></div>
                 </div>
@@ -95,18 +93,17 @@
         <ul class="mobile-nav__contact list-unstyled">
             <li>
                 <i class="fa fa-envelope"></i>
-                <a href="mailto:info@example.com">info@example.com</a>
+                <a href="mailto:{{$companyInfo->company_email}}">{{$companyInfo->company_email}}</a>
             </li>
             <li>
                 <i class="fa fa-phone-alt"></i>
-                <a href="tel:123456789">444 000 777 66</a>
+                <a href="tel:{{$companyInfo->company_phone}}">{{$companyInfo->company_phone}}</a>
             </li>
         </ul>
         <div class="mobile-nav__social">
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-facebook-square"></a>
-            <a href="#" class="fab fa-pinterest-p"></a>
-            <a href="#" class="fab fa-instagram"></a>
+            @foreach($companyInfo->socialLinks() as $socialLink)
+                <a href="{{$socialLink['link']}}" class="{{$socialLink['icon']}}"></a>
+            @endforeach
         </div>
     </div>
 </div>
