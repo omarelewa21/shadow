@@ -26,8 +26,9 @@
                             </h2>
                         </div>
 
-                        <form id="contact-form" class="default-form2 contact-form-validated"
-                            action="assets/inc/sendemail.php" novalidate="novalidate">
+                        <form method="POST" id="contact-form" class="default-form2 contact-form-validated"
+                            action="/contact" novalidate="novalidate">
+                            @csrf
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="input-box">
@@ -62,6 +63,9 @@
                                     </div>
                                 </div>
 
+                                <div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>
+                                <div id="form-result2" class="alert alert-danger" role="alert" style="display: none;"></div>
+                
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="contact-one__form-btn">
                                         <button class="thm-btn" type="submit" data-loading-text="Please wait...">

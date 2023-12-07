@@ -35,6 +35,7 @@
     <!-- template styles -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}" />
+    @stack('styles')
 </head>
 
 <body>
@@ -86,9 +87,11 @@
     <script src="{{asset('vendors/gsap/gsap.js')}}" ></script>
     <script src="{{asset('vendors/gsap/ScrollTrigger.js')}}" ></script>
     <script src="{{asset('vendors/gsap/SplitText.js')}}" ></script>
+    <script src="https://malsup.github.io/jquery.form.js"></script> 
 
     <!-- Template js -->
     <script src="{{asset('js/custom.js')}}" ></script>
+    @stack('scripts')
 </body>
 
 </html>
