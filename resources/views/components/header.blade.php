@@ -35,8 +35,14 @@
                                     </ul>
                                 </li>
 
-                                <li>
-                                    <a href="blog.html">Blog</a>
+                                <li class="dropdown">
+                                    <a href="#">Pages</a>
+                                    <ul>
+                                        <li><a href="portfolio.html">Portfolio</a></li>
+                                        <li><a href="team.html">Team</a></li>
+                                        <li><a href="testimonial.html">Testimonial</a></li>
+                                        <li><a href="faq.html">Faq</a></li>
+                                    </ul>
                                 </li>
 
                                 <li>

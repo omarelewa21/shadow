@@ -29,7 +29,7 @@ class CompanyInfoRequest extends FormRequest
             'company_address'   => 'required|min:2|max:500',
             'company_phone'     => 'required|min:2|max:255|regex:/(01)[0-9]{9}/',
             'company_email'     => 'required|min:2|max:255|email',
-            'company_logo'      => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'company_logo'      => 'image|mimes:jpeg,png,jpg|max:2048',
             'company_facebook'  => 'min:2|max:255|nullable',
             'company_twitter'   => 'min:2|max:255|nullable',
             'company_linkedin'  => 'min:2|max:255|nullable',
@@ -37,7 +37,8 @@ class CompanyInfoRequest extends FormRequest
             'company_youtube'   => 'min:2|max:255|nullable',
             'company_pinterest' => 'min:2|max:255|nullable',
             'company_github'    => 'min:2|max:255|nullable',
-            'company_map_iframe'=> 'required'
+            'company_map_iframe'=> 'required',
+            'tab_icon'          => 'image|mimes:jpeg,png,jpg|max:2048',
         ];
     }
 

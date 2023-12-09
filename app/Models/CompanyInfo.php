@@ -29,7 +29,7 @@ class CompanyInfo extends Model
         'company_pinterest',
         'company_github',
         'company_map_iframe',
-        'company_about'
+        'tab_icon',
     ];
 
     public $timestamps = false;
@@ -37,6 +37,7 @@ class CompanyInfo extends Model
     public $appends = [
         'company_logo',
         'company_map_iframe_src',
+        'tab_icon_src',
     ];
 
     const COMPANY_SOCIAL_ATTRIBUTES_WITH_ICON = [
@@ -85,6 +86,20 @@ class CompanyInfo extends Model
                 } else {
                     // Handle the case where there is no iframe element
                     return ''; // or throw an exception, log an error, etc.
+                }
+            },
+        );
+    }
+
+    protected function tabIconSrc(): Attribute
+    {
+        return Attribute::make(
+            get: function ($value, $attributes) {
+                $value = $attributes['tab_icon'];
+                if($value) {
+                    return sprintf("/storage/%s", $value);
+                } else {
+                    return 'favicon.ico';
                 }
             },
         );

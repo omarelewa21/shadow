@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ $title }}</title>
     <!-- Favicons Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('images/favicons/apple-touch-icon.png')}}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('images/favicons/favicon-32x32.png')}}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/favicons/favicon-16x16.png')}}" />
-    <link rel="manifest" href="{{asset('images/favicons/site.webmanifest')}}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{$companyInfo->tab_icon}}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{$companyInfo->tab_icon}}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{$companyInfo->tab_icon}}" />
+    <link rel="manifest" href="{{$companyInfo->tab_icon}}" />
     <meta name="description" content="Shadow For Technical Solutions" />
 
     <!-- Fonts -->

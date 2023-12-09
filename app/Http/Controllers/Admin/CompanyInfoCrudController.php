@@ -31,6 +31,10 @@ class CompanyInfoCrudController extends CrudController
             'disk' => 'public', // the disk where file will be stored
             'path' => 'uploads', // the path inside the disk where file will be stored
         ]);
+        CRUD::field('tab_icon')->type('upload')->withFiles([
+            'disk' => 'public', // the disk where file will be stored
+            'path' => 'uploads', // the path inside the disk where file will be stored
+        ]);
     }
 
     /**
