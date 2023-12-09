@@ -17,7 +17,7 @@
 
                             <ul class="main-menu__list">
                                 <li class="current">
-                                    <a href="index.html">Home</a>
+                                    <a href="{{route('home')}}">Home</a>
                                 </li>
 
                                 <li>

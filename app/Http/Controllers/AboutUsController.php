@@ -12,7 +12,7 @@ class AboutUsController extends Controller
     {
         $aboutUs = AboutUs::first();
         $projects = PortfolioProject::limit(5)->get();
-        $teamMembers = TeamMember::where('fixed_in_about_page')->limit(3)->get();
+        $teamMembers = TeamMember::where('fixed_in_about_page', 1)->limit(3)->get();
         return view('about-us', compact('aboutUs', 'projects', 'teamMembers'));
     }
 }
