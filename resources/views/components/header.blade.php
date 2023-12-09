@@ -27,18 +27,11 @@
                                 <li class="dropdown">
                                     <a href="#">Services</a>
                                     <ul>
-                                        <li>
-                                            <a href="agriculture-services.html">Agriculture Services</a>
-                                        </li>
-                                        <li>
-                                            <a href="graphic-design.html">Graphic Design</a>
-                                        </li>
-                                        <li>
-                                            <a href="delivery-services.html">Delivery Services</a>
-                                        </li>
-                                        <li>
-                                            <a href="farming-products.html">Farming Products</a>
-                                        </li>
+                                        @foreach($services as $service)
+                                            <li>
+                                                <a href="{{route('service.show', $service->id)}}">{{$service->service_title}}</a>
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </li>
 

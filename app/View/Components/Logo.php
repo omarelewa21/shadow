@@ -14,7 +14,7 @@ class Logo extends Component
 
     public function __construct()
     {
-        $this->logoPath = sprintf("/storage/%s", CompanyInfo::first()->company_logo) ;
+        $this->logoPath = sprintf("/storage/%s", CompanyInfo::first()->company_logo);
     }
 
     public function render(): View|Closure|string

@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="{{asset('vendors/swiper/swiper.min.css')}}" />
     <link rel="stylesheet" href="{{asset('vendors/thm-icons/style.css')}}" />
     <link rel="stylesheet" href="{{asset('vendors/reey-font/stylesheet.css')}}" />
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
     <!-- template styles -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
@@ -88,6 +89,7 @@
     <script src="{{asset('vendors/gsap/ScrollTrigger.js')}}" ></script>
     <script src="{{asset('vendors/gsap/SplitText.js')}}" ></script>
     <script src="https://malsup.github.io/jquery.form.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
     <!-- Template js -->
     <script src="{{asset('js/custom.js')}}" ></script>
