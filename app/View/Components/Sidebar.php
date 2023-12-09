@@ -2,18 +2,21 @@
 
 namespace App\View\Components;
 
+use App\Models\AboutUs;
+use App\Models\CompanyInfo;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class Sidebar extends Component
 {
-    /**
-     * Create a new component instance.
-     */
+    public CompanyInfo $companyInfo;
+    public string $aboutUs;
+
     public function __construct()
     {
-        //
+        $this->companyInfo = CompanyInfo::first();
+        $this->aboutUs = AboutUs::first()->about_us_description;
     }
 
     /**

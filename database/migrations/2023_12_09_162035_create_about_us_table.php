@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('image1');
             $table->string('image2');
             $table->text('advantage_description');
+            $table->text('about_us_description');
             $table->timestamps();
         });
 
@@ -28,6 +29,7 @@ return new class extends Migration
             'image1' => 'assets/img/about-us-1.jpg',
             'image2' => 'assets/img/about-us-2.jpg',
             'advantage_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta lobortis sit amet eu leo. Praesent at facilisis libero. Sed blandit, magna id ornare facilisis, nisl justo accumsan tortor, a faucibus metus magna et risus.',
+            'about_us_description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta lobortis sit amet eu leo. Praesent at facilisis libero. Sed blandit, magna id ornare facilisis, nisl justo accumsan tortor, a faucibus metus magna et risus.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);

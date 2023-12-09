@@ -13,21 +13,25 @@
                         <div class="content-box">
                             <h4>About Us</h4>
                             <div class="inner-text">
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-                                    roots in a piece of classical Latin literature from 45 BC, making it over
-                                    2000 years old.
-                                </p>
+                                <p>{{$aboutUs}}</p>
                             </div>
                         </div>
 
                         <div class="form-inner">
                             <h4>Get a free quote</h4>
-                            <form action="index.html" method="post">
+                            <form action="/contact" method="post">
+                                @csrf
                                 <div class="form-group">
                                     <input type="text" name="name" placeholder="Name" required="">
                                 </div>
                                 <div class="form-group">
                                     <input type="email" name="email" placeholder="Email" required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="PHONE *" name="phone">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="SUBJECT *" name="subject">
                                 </div>
                                 <div class="form-group">
                                     <textarea name="message" placeholder="Message..."></textarea>
@@ -46,32 +50,23 @@
                             <h4>Contact Info</h4>
                             <ul>
                                 <li>
-                                    <span class="icon-placeholder-1"></span> 88 broklyn street, New York
+                                    <span class="icon-placeholder-1"></span> {{$companyInfo->company_address}}
                                 </li>
                                 <li>
                                     <span class="icon-phone-ringing"></span>
-                                    <a href="tel:123456789">+1 555-9990-153</a>
+                                    <a href="tel:{{$companyInfo->company_phone}}">{{$companyInfo->company_phone}}</a>
                                 </li>
                                 <li>
                                     <span class="fa fa-envelope"></span>
-                                    <a href="mailto:info@example.com">info@example.com</a>
+                                    <a href="mailto:{{$companyInfo->company_email}}">{{$companyInfo->company_email}}</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="thm-social-link1">
                             <ul class="social-box">
-                                <li class="facebook">
-                                    <a href="#"><i class="icon-facebook" aria-hidden="true"></i></a>
-                                </li>
-                                <li class="twitter">
-                                    <a href="#"><i class="icon-twitter" aria-hidden="true"></i></a>
-                                </li>
-                                <li class="linkedin">
-                                    <a href="#"><i class="icon-instagram" aria-hidden="true"></i></a>
-                                </li>
-                                <li class="gplus">
-                                    <a href="#"><i class="icon-pinterest" aria-hidden="true"></i></a>
-                                </li>
+                                @foreach($companyInfo->socialLinks() as $socialLink)
+                                    <a href="{{$socialLink['link']}}" class="{{$socialLink['icon']}}"></a>
+                                @endforeach
                             </ul>
                         </div>
                     </div>

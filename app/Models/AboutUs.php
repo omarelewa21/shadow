@@ -16,5 +16,6 @@ class AboutUs extends Model
         'image1',
         'image2',
         'advantage_description',
+        'about_us_description',
     ];
 }
