@@ -6,3 +6,5 @@
 <x-backpack::menu-item title="Services" icon="la la-question" :link="backpack_url('service')" />
 <x-backpack::menu-item title="Team members" icon="la la-question" :link="backpack_url('team-member')" />
 <x-backpack::menu-item title="Faqs" icon="la la-question" :link="backpack_url('faq')" />
+<x-backpack::menu-item title="Testimonials" icon="la la-question" :link="backpack_url('testimonial')" />
+<x-backpack::menu-item title="Testimonial stats" icon="la la-question" :link="backpack_url('testimonial-stats')" />

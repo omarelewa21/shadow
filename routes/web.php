@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\TestimonialsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,4 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 Route::get('/service/{service}', [ServiceController::class, 'show'])->name('service.show');
 Route::get('/team', [TeamController::class, 'index'])->name('team');
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
+Route::get('testimonials', [TestimonialsController::class, 'index'])->name('testimonials');
