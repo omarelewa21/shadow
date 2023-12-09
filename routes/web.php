@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\PortfolioController;
@@ -30,3 +31,4 @@ Route::get('/team', [TeamController::class, 'index'])->name('team');
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 Route::get('/testimonials', [TestimonialsController::class, 'index'])->name('testimonials');
 Route::get('/protfolio', [PortfolioController::class, 'index'])->name('protfolio');
+Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');

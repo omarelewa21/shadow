@@ -21,11 +21,11 @@
                                 </li>
 
                                 <li>
-                                    <a href="about.html">About</a>
+                                    <a href="{{route('about-us')}}">About</a>
                                 </li>
 
                                 <li class="dropdown">
-                                    <a href="#">Services</a>
+                                    <a href="{{route('service.show', $services->first()->id)}}">Services</a>
                                     <ul>
                                         @foreach($services as $service)
                                             <li>

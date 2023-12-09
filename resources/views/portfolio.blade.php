@@ -34,9 +34,9 @@
                         <div class="gallery-two__single">
                             <div class="gallery-two__single-img">
                                 <div class="inner">
-                                    <img src="{{$project->banner}}" alt="#">
+                                    <img src="{{$project->banner}}" alt="{{$project->title}}">
                                     <div class="overlay-content">
-                                        <h2>{{$project->title}}</h2>
+                                        <h2 style="color:black">{{$project->title}}</h2>
                                     </div>
                                 </div>
                             </div>
