@@ -27,4 +27,4 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 Route::get('/service/{service}', [ServiceController::class, 'show'])->name('service.show');
 Route::get('/team', [TeamController::class, 'index'])->name('team');
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
-Route::get('testimonials', [TestimonialsController::class, 'index'])->name('testimonials');
+Route::get('/testimonials', [TestimonialsController::class, 'index'])->name('testimonials');
