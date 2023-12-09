@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialsController;
@@ -28,3 +29,4 @@ Route::get('/service/{service}', [ServiceController::class, 'show'])->name('serv
 Route::get('/team', [TeamController::class, 'index'])->name('team');
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 Route::get('/testimonials', [TestimonialsController::class, 'index'])->name('testimonials');
+Route::get('/protfolio', [PortfolioController::class, 'index'])->name('protfolio');
