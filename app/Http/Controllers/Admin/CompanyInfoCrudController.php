@@ -27,6 +27,10 @@ class CompanyInfoCrudController extends CrudController
         CRUD::setModel(\App\Models\CompanyInfo::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/company-info');
         CRUD::setEntityNameStrings('company info', 'company infos');
+        CRUD::field('company_logo')->type('upload')->withFiles([
+            'disk' => 'public', // the disk where file will be stored
+            'path' => 'uploads', // the path inside the disk where file will be stored
+        ]);
     }
 
     /**

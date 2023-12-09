@@ -1,1 +1,3 @@
-<a href="index.html"><img src="{{asset('images/resources/logo-1.png')}}" alt="" /></a>
+<a href="{{route('home')}}">
+    <img src="{{$logoPath}}" alt="Logo" width="75" height="75" />
+</a>
