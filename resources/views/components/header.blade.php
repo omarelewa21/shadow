@@ -40,8 +40,8 @@
                                     <ul>
                                         <li><a href="portfolio.html">Portfolio</a></li>
                                         <li><a href="{{route('team')}}">Team</a></li>
-                                        <li><a href="testimonial.html">Testimonial</a></li>
-                                        <li><a href="faq.html">Faq</a></li>
+                                        <li><a href="{{route('faq')}}">Testimonial</a></li>
+                                        <li><a href="{{route('faq')}}">Faq</a></li>
                                     </ul>
                                 </li>
 
