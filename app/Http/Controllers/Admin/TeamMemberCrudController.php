@@ -29,6 +29,10 @@ class TeamMemberCrudController extends CrudController
         CRUD::setModel(\App\Models\TeamMember::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/team-member');
         CRUD::setEntityNameStrings('team member', 'team members');
+        CRUD::field('image')->type('upload')->withFiles([
+            'disk' => 'public', // the disk where file will be stored
+            'path' => 'uploads', // the path inside the disk where file will be stored
+        ]);
     }
 
     /**
