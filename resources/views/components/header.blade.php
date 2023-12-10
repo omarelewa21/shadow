@@ -25,7 +25,7 @@
                                 </li>
 
                                 <li class="dropdown">
-                                    <a href="{{route('service.show', $services->first()->id)}}">Services</a>
+                                    <a href="{{$services->isNotEmpty() ? route('service.show', $services->first()->id) : '#'}}">Services</a>
                                     <ul>
                                         @foreach($services as $service)
                                             <li>
