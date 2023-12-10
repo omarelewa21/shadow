@@ -22,7 +22,7 @@
                                 <div class="border-box"></div>
                             </div>
                             <h2 class="sec-title__title tg-element-title">
-                                @lang('Join Us To Get It Free') <br> @lang('Consultations')
+                                @lang('Join Us To Get Free') <br> @lang('Consultations')
                             </h2>
                         </div>
 

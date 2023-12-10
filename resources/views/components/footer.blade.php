@@ -50,8 +50,8 @@
                 <div class="footer-one__menu">
                     <ul>
                         <li><a href="{{route('home')}}">Home</a></li>
-                        {{-- <li><a href="{{route('about')}}">About</a></li>
-                        <li><a href="{{route('portfolio')}}">Portfolio</a></li> --}}
+                        <li><a href="{{route('about-us')}}">About</a></li>
+                        <li><a href="{{route('protfolio')}}">Portfolio</a></li>
                         <li><a href="{{route('service.show', 1)}}">Services</a></li>
                     </ul>
                 </div>
