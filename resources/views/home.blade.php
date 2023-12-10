@@ -82,13 +82,13 @@
                     <div class="services-two__inner">
                         <div class="services-two__middle-content">
                             <div class="img-box float-bob-y">
-                                <img src="{{asset('images/resources/services-v2-img1.jpg')}}" alt="">
+                                <img src="{{$companyInfo->home_page_service_image}}" alt="Main">
                             </div>
 
                             <div class="services-two__video">
                                 <div class="video-box">
                                     <a class="video-popup" title="Video Gallery"
-                                        href="https://www.youtube.com/watch?v=p25gICT63ek"
+                                        href="{{$companyInfo->home_page_youtube_link}}"
                                         style="visibility: visible;">
                                         <i class="icon-play-button-1" aria-hidden="true"></i>
                                         <span class="ripple"></span>

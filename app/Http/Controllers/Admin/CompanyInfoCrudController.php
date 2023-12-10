@@ -27,14 +27,7 @@ class CompanyInfoCrudController extends CrudController
         CRUD::setModel(\App\Models\CompanyInfo::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/company-info');
         CRUD::setEntityNameStrings('company info', 'company infos');
-        CRUD::field('company_logo')->type('upload')->withFiles([
-            'disk' => 'public', // the disk where file will be stored
-            'path' => 'uploads', // the path inside the disk where file will be stored
-        ]);
-        CRUD::field('tab_icon')->type('upload')->withFiles([
-            'disk' => 'public', // the disk where file will be stored
-            'path' => 'uploads', // the path inside the disk where file will be stored
-        ]);
+        $this->setupImagesFields();
     }
 
     /**
@@ -79,5 +72,21 @@ class CompanyInfoCrudController extends CrudController
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
+    }
+
+    private function setupImagesFields()
+    {
+        CRUD::field('company_logo')->type('upload')->withFiles([
+            'disk' => 'public', // the disk where file will be stored
+            'path' => 'uploads', // the path inside the disk where file will be stored
+        ]);
+        CRUD::field('tab_icon')->type('upload')->withFiles([
+            'disk' => 'public', // the disk where file will be stored
+            'path' => 'uploads', // the path inside the disk where file will be stored
+        ]);
+        CRUD::field('home_page_service_image')->type('upload')->withFiles([
+            'disk' => 'public', // the disk where file will be stored
+            'path' => 'uploads', // the path inside the disk where file will be stored
+        ]);
     }
 }

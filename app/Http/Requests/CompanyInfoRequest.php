@@ -39,6 +39,8 @@ class CompanyInfoRequest extends FormRequest
             'company_github'    => 'min:2|max:255|nullable',
             'company_map_iframe'=> 'required',
             'tab_icon'          => 'image|mimes:jpeg,png,jpg|max:2048',
+            'home_page_service_image' => 'image|mimes:jpeg,png,jpg|max:2048',
+            'home_page_youtube_link'  => 'required|string',
         ];
     }
 

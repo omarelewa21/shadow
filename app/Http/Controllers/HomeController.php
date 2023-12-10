@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CompanyInfo;
 use App\Models\HomeSlider;
 use App\Models\PortfolioProject;
 use App\Models\Service;
@@ -19,6 +20,7 @@ class HomeController extends Controller
         $team = TeamMember::where('fixed_in_about_page', true)->limit(4)->get();
         $services = Service::limit(4)->get();
         $sliders = HomeSlider::all();
-        return view('home', compact('stats', 'projects', 'testimonials', 'team', 'services', 'sliders'));
+        $companyInfo = CompanyInfo::select('home_page_service_image', 'home_page_youtube_link')->first();
+        return view('home', compact('stats', 'projects', 'testimonials', 'team', 'services', 'sliders', 'companyInfo'));
     }
 }
