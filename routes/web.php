@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
@@ -20,10 +21,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name("home");
 
+Route::get('/', [HomeController::class, 'home'])->name("home");
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::get('/service/{service}', [ServiceController::class, 'show'])->name('service.show');
@@ -32,3 +31,4 @@ Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 Route::get('/testimonials', [TestimonialsController::class, 'index'])->name('testimonials');
 Route::get('/protfolio', [PortfolioController::class, 'index'])->name('protfolio');
 Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
+Route::fallback(fn () => redirect()->route('home'));

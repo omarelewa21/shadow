@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('position');
             $table->string('image');
-            $table->boolean('fixed_in_about_page')->default(false);
+            $table->boolean('fixed_in_about_page')->default(true);
             $table->timestamps();
         });
     }
