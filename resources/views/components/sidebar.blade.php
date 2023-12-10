@@ -19,7 +19,7 @@
 
                         <div class="form-inner">
                             <h4>Get a free quote</h4>
-                            <form action="/contact" method="post">
+                            <form id="sidebar-contact-form" action="/contact" method="post" class="contact-form-validated">
                                 @csrf
                                 <div class="form-group">
                                     <input type="text" name="name" placeholder="Name" required="">
@@ -36,6 +36,8 @@
                                 <div class="form-group">
                                     <textarea name="message" placeholder="Message..."></textarea>
                                 </div>
+                                <div id="sidebar-form-result" class="alert alert-success" role="alert" style="display: none;"></div>
+                                <div id="sidebar-form-result2" class="alert alert-danger" role="alert" style="display: none;"></div>
                                 <div class="form-group message-btn">
                                     <button class="thm-btn" type="submit" data-loading-text="Please wait...">
                                         <span class="txt">Submit Now</span>

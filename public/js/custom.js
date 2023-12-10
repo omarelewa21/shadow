@@ -512,6 +512,49 @@
         });
     }
 
+    //Contact Form Validation
+    if ($("#sidebar-contact-form").length) {
+        $("#sidebar-contact-form").validate({
+            submitHandler: function (form) {
+                var form_btn = $(form).find('button[type="submit"]');
+                var success_div = "#sidebar-form-result";
+                var failed_div = "#sidebar-form-result2";
+                var form_btn_old_msg = form_btn.html();
+                form_btn.html(form_btn.prop("disabled", true).data("loading-text"));
+                $(form).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        form_btn.prop("disabled", false).html(form_btn_old_msg);
+                        $(form).find(".form-control").val("");
+                            $(success_div).html(data.message).fadeIn("slow");
+                            setTimeout(function () {
+                                $(success_div).fadeOut("slow");
+                            }, 6000);
+                    },
+                    error: function (data) {
+                        form_btn.prop("disabled", false).html(form_btn_old_msg);
+                        
+                        if(data.status == 422) {
+                            let errors = Object.values(data.responseJSON.errors);
+                            console.log(errors);
+                            let html = errors.join("<br/>");
+                            $(failed_div).html(html).fadeIn("slow");
+                            setTimeout(function () {
+                                $(failed_div).fadeOut("slow");
+                            }, 6000);
+                        } else {
+                            console.error(data);
+                            $(failed_div).html("Something went wrong, please try again later").fadeIn("slow");
+                            setTimeout(function () {
+                                $(failed_div).fadeOut("slow");
+                            }, 6000);
+                        }
+                    }
+                });
+            },
+        });
+    }
+
     if ($(".odometer").length) {
         var odo = $(".odometer");
         odo.each(function () {
