@@ -31,6 +31,9 @@ class ServiceRequest extends FormRequest
             'service_main_banner'   => 'image|mimes:png,jpg,jpeg|max:2048',
             'service_second_banner' => 'image|mimes:png,jpg,jpeg|max:2048',
             'service_third_banner'  => 'image|mimes:png,jpg,jpeg|max:2048',
+            'icon'                  => 'string|max:100',
+            'home_description'      => 'required|string',
+            'fixed_in_home_page'    => 'boolean',
         ];
     }
 

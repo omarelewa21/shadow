@@ -97,5 +97,6 @@ class ServiceCrudController extends CrudController
     {
         CRUD::field('service_description')->type('summernote');
         CRUD::field('why_choose_description')->type('summernote');
+        CRUD::field('home_description')->type('summernote');
     }
 }
