@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HomeSlider;
 use App\Models\PortfolioProject;
 use App\Models\Service;
 use App\Models\TeamMember;
@@ -17,6 +18,7 @@ class HomeController extends Controller
         $testimonials = Testimonial::limit(3)->get();
         $team = TeamMember::where('fixed_in_about_page', true)->limit(4)->get();
         $services = Service::limit(4)->get();
-        return view('home', compact('stats', 'projects', 'testimonials', 'team', 'services'));
+        $sliders = HomeSlider::all();
+        return view('home', compact('stats', 'projects', 'testimonials', 'team', 'services', 'sliders'));
     }
 }

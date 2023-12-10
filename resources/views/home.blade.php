@@ -17,116 +17,40 @@
             }}'>
             <div class="swiper-wrapper">
 
-                <!--Start Main Slider Two Single-->
-                <div class="swiper-slide">
-                    <div class="image-layer"
-                        style="background-image: url({{asset('images/slides/download-_3_.jpg')}});"></div>
-                    <div class="main-slider-two__bg"
-                        style="background-image: url({{asset('images/slides/download-_3_.jpg')}});"></div>
-                    <div class="auto-container">
-                        <div class="main-slider-two__single">
-                            <div class="main-slider-two__single-top">
-                                <div class="counter-box">
-                                    <div class="number">
-                                        <h2>01</h2>
+                @foreach ($sliders as $index=>$slider)
+                    <!--Start Main Slider Two Single-->
+                    <div class="swiper-slide">
+                        <div class="image-layer"
+                            style="background-image: url({{$slider->background_image1}});"></div>
+                        <div class="main-slider-two__bg"
+                            style="background-image: url({{$slider->background_image2}});"></div>
+                        <div class="auto-container">
+                            <div class="main-slider-two__single">
+                                <div class="main-slider-two__single-top">
+                                    <div class="counter-box">
+                                        <div class="number">
+                                            <h2>0{{$index+1}}</h2>
+                                        </div>
+                                        <div class="border-box"></div>
                                     </div>
-                                    <div class="border-box"></div>
+                                    <div class="text">
+                                        <p>{!! $slider->description !!}</p>
+                                    </div>
+                                    <div class="btn-box">
+                                        <a href="#">Get In Touch</a>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <p>First project completed marketing <br>
-                                        reserch abusiness high level process consultations for <br>
-                                        business the best highest growths.</p>
-                                </div>
-                                <div class="btn-box">
-                                    <a href="#">Get In Touch</a>
-                                </div>
-                            </div>
 
-                            <div class="main-slider-two__single-bottom">
-                                <div class="title-box">
-                                    <h2>Digital <br>
-                                        Marketing</h2>
-                                    <h3>Solutions</h3>
+                                <div class="main-slider-two__single-bottom">
+                                    <div class="title-box">
+                                        <h2> {!! $slider->title !!} </h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--End Main Slider Two Single-->
-
-                <!--Start Main Slider Two Single-->
-                <div class="swiper-slide">
-                    <div class="image-layer"
-                        style="background-image: url(assets/images/slides/slider-v2-img3.jpg);"></div>
-                    <div class="main-slider-two__bg"
-                        style="background-image: url(assets/images/slides/slider-v2-img4.jpg);"></div>
-                    <div class="auto-container">
-                        <div class="main-slider-two__single">
-                            <div class="main-slider-two__single-top">
-                                <div class="counter-box">
-                                    <div class="number">
-                                        <h2>02</h2>
-                                    </div>
-                                    <div class="border-box"></div>
-                                </div>
-                                <div class="text">
-                                    <p>Second project completed marketing <br>
-                                        reserch abusiness high level process consultations for <br>
-                                        business the best highest growths.</p>
-                                </div>
-                                <div class="btn-box">
-                                    <a href="#">Get In Touch</a>
-                                </div>
-                            </div>
-
-                            <div class="main-slider-two__single-bottom">
-                                <div class="title-box">
-                                    <h2>Digital <br>
-                                        Marketing</h2>
-                                    <h3>Solutions</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End Main Slider Two Single-->
-
-                <!--Start Main Slider Two Single-->
-                <div class="swiper-slide">
-                    <div class="image-layer"
-                        style="background-image: url(assets/images/slides/slider-v2-img1.jpg);"></div>
-                    <div class="main-slider-two__bg"
-                        style="background-image: url(assets/images/slides/slider-v2-img2.jpg);"></div>
-                    <div class="auto-container">
-                        <div class="main-slider-two__single">
-                            <div class="main-slider-two__single-top">
-                                <div class="counter-box">
-                                    <div class="number">
-                                        <h2>03</h2>
-                                    </div>
-                                    <div class="border-box"></div>
-                                </div>
-                                <div class="text">
-                                    <p>Third project completed marketing <br>
-                                        reserch abusiness high level process consultations for <br>
-                                        business the best highest growths.</p>
-                                </div>
-                                <div class="btn-box">
-                                    <a href="#">Get In Touch</a>
-                                </div>
-                            </div>
-
-                            <div class="main-slider-two__single-bottom">
-                                <div class="title-box">
-                                    <h2>Digital <br>
-                                        Marketing</h2>
-                                    <h3>Solutions</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End Main Slider Two Single-->
+                    <!--End Main Slider Two Single-->
+                @endforeach
             </div>
 
             <!-- If we need navigation buttons -->
