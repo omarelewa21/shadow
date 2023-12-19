@@ -34,7 +34,7 @@
                         <div class="gallery-two__single">
                             <div class="gallery-two__single-img">
                                 <div class="inner">
-                                    <img src="{{$project->banner}}" alt="{{$project->title}}">
+                                    <img src="/storage/{{$project->banner}}" alt="{{$project->title}}">
                                     <div class="overlay-content">
                                         <h2 style="color:black">{{$project->title}}</h2>
                                     </div>

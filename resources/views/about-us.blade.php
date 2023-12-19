@@ -24,7 +24,7 @@
                     @foreach ($projects as $project)
                         <li class="col-2">
                             <a style="width: 100%" href="{{$project->link}}">
-                                <img src="{{$project->banner}}" alt="{{$project->title}}">
+                                <img src="/storage/{{$project->banner}}" alt="{{$project->title}}">
                             </a>
                         </li>
                     @endforeach
@@ -43,7 +43,7 @@
                         <div class="advantages-one__single">
                             <div class="advantages-one__single-img">
                                 <div class="inner">
-                                    <img src="{{$aboutUs->image1}}" alt="#">
+                                    <img src="/storage/{{$aboutUs->image1}}" alt="#">
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                         <div class="advantages-one__single">
                             <div class="advantages-one__single-img">
                                 <div class="inner">
-                                    <img src="{{$aboutUs->image2}}" alt="#">
+                                    <img src="/storage/{{$aboutUs->image2}}" alt="#">
                                 </div>
                             </div>
                         </div>
@@ -129,7 +129,7 @@
                                 <div class="team-one__single">
                                     <div class="team-one__single-img">
                                         <div class="inner">
-                                            <img src="{{$teamMembers->first()->image}}" alt="#">
+                                            <img src="/storage/{{$teamMembers->first()->image}}" alt="#">
                                             <div class="overlay-content">
                                                 <h2><a href="#">{{$teamMembers->first()->name}}</a></h2>
                                                 <p>{{$teamMembers->first()->position}}</p>
@@ -147,7 +147,7 @@
                                 <div class="team-one__single mt40">
                                     <div class="team-one__single-img">
                                         <div class="inner">
-                                            <img src="{{$teamMembers->get(1)->image}}" alt="#">
+                                            <img src="/storage/{{$teamMembers->get(1)->image}}" alt="#">
                                             <div class="overlay-content">
                                                 <h2><a href="#">{{$teamMembers->get(1)->name}}</a></h2>
                                                 <p>{{$teamMembers->get(1)->position}}</p>
@@ -165,7 +165,7 @@
                                 <div class="team-one__single mt80">
                                     <div class="team-one__single-img">
                                         <div class="inner">
-                                            <img src="{{$teamMembers->last()->image}}" alt="#">
+                                            <img src="/storage/{{$teamMembers->last()->image}}" alt="#">
                                             <div class="overlay-content">
                                                 <h2><a href="#">{{$teamMembers->last()->name}}</a></h2>
                                                 <p>{{$teamMembers->last()->position}}</p>

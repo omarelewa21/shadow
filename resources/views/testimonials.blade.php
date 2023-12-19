@@ -95,7 +95,7 @@
                                             </ul>
                                         </div>
                                         <div class="img-box">
-                                            <img src="{{$testimonial->client_image}}" alt="Client Image">
+                                            <img src="/storage/{{$testimonial->client_image}}" alt="Client Image">
                                         </div>
                                     </div>
                                 </div>

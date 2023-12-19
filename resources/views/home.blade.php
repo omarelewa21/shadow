@@ -21,9 +21,9 @@
                     <!--Start Main Slider Two Single-->
                     <div class="swiper-slide">
                         <div class="image-layer"
-                            style="background-image: url({{$slider->background_image1}});"></div>
+                            style="background-image: url(/storage/{{$slider->background_image1}});"></div>
                         <div class="main-slider-two__bg"
-                            style="background-image: url({{$slider->background_image2}});"></div>
+                            style="background-image: url(/storage/{{$slider->background_image2}});"></div>
                         <div class="auto-container">
                             <div class="main-slider-two__single">
                                 <div class="main-slider-two__single-top">
@@ -82,7 +82,7 @@
                     <div class="services-two__inner">
                         <div class="services-two__middle-content">
                             <div class="img-box float-bob-y">
-                                <img src="{{$companyInfo->home_page_service_image}}" alt="Main">
+                                <img src="/storage/{{$companyInfo->home_page_service_image}}" alt="Main">
                             </div>
 
                             <div class="services-two__video">
@@ -260,7 +260,7 @@
                                     <div class="gallery-two__single">
                                         <div class="gallery-two__single-img">
                                             <div class="inner">
-                                                <img src="{{$project->banner}}" alt="{{$project->title}}">
+                                                <img src="/storage/{{$project->banner}}" alt="{{$project->title}}">
                                                 <div class="overlay-content">
                                                     <h2 style="color:black">{{$project->title}}</h2>
                                                 </div>
@@ -286,7 +286,7 @@
                     @foreach ($projects as $project)
                         <li class="col-2">
                             <a style="width: 100%" href="{{$project->link}}">
-                                <img src="{{$project->banner}}" alt="{{$project->title}}">
+                                <img src="/storage/{{$project->banner}}" alt="{{$project->title}}">
                             </a>
                         </li>
                     @endforeach
@@ -351,7 +351,7 @@
                                         <p>{{$testimonial->testimonial_text}} </p>
                                     </div>
                                     <div class="testimonials-two__img"><img class="testimonials-two__img-hover"
-                                            src="{{$testimonial->client_image}}" alt="{{$testimonial->client_name}}"></div>
+                                            src="/storage/{{$testimonial->client_image}}" alt="{{$testimonial->client_name}}"></div>
                                 </li>
                             @endforeach
                         </ul>
@@ -401,7 +401,7 @@
                                 <div class="team-two__single">
                                     <div class="team-two__single-img">
                                         <div class="inner">
-                                            <img src="{{$member->image}}" alt="{{$member->name}}">
+                                            <img src="/storage/{{$member->image}}" alt="{{$member->name}}">
                                         </div>
                                     </div>
 
