@@ -6092,7 +6092,6 @@ Feature One Css
   display: block;
   padding: 40px 0px 40px;
   background: var(--thm-black);
-  overflow-x: hidden;
 }
 
 .feature-one__wrap {
