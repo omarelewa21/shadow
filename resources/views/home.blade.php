@@ -145,7 +145,7 @@
                                 @endphp
                                 <li class="services-two__list-item wow fadeInLeft" data-wow-delay="100ms"
                                     data-wow-duration="1000ms">
-                                    <div class="icon-box">
+                                    <div class="icon-box display-6">
                                         {!! $service->icon !!}
                                     </div>
 
