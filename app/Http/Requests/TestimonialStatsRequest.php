@@ -26,7 +26,7 @@ class TestimonialStatsRequest extends FormRequest
     {
         return [
             'stat_name'     => 'required',
-            'stat_value'    => 'required|numeric|min:0|max:255',
+            'stat_value'    => 'required|integer|min:0|max:255',
             'add_plus_sign' => 'boolean',
             'add_k_char'    => 'boolean',
         ];
