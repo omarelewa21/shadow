@@ -125,13 +125,13 @@
                                     @endphp
                                     <li class="services-two__list-item style2 wow fadeInRight" data-wow-delay="0ms"
                                         data-wow-duration="1000ms">
-                                        <div class="icon-box">
+                                        <div class="icon-box display-6">
                                             {!! $service->icon !!}
                                         </div>
 
                                         <div class="content-box">
                                             <h2><a href="#">{{$service->service_title}}</a></h2>
-                                            <p>{{$service->home_description}}</p>
+                                            <p>{!! $service->home_description !!}</p>
                                         </div>
                                     </li>
                                 @endif
@@ -151,7 +151,7 @@
 
                                     <div class="content-box">
                                         <h2><a href="#">{{$service->service_title}}</a></h2>
-                                        <p>{{$service->home_description}}</p>
+                                        <p>{!! $service->home_description !!}</p>
                                     </div>
                                 </li>
                             @endif
@@ -162,13 +162,13 @@
                                 @endphp
                                 <li class="services-two__list-item style2 wow fadeInRight" data-wow-delay="0ms"
                                     data-wow-duration="1000ms">
-                                    <div class="icon-box">
+                                    <div class="icon-box display-6">
                                         {!! $service->icon !!}
                                     </div>
 
                                     <div class="content-box">
                                         <h2><a href="#">{{$service->service_title}}</a></h2>
-                                        <p>{{$service->home_description}}</p>
+                                        <p>{!! $service->home_description !!}</p>
                                     </div>
                                 </li>
                             @endif
