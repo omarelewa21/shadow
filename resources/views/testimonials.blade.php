@@ -123,8 +123,7 @@
                                     </div>
                                     <div class="counter-box">
                                         <h2>
-                                            <span class="odometer" data-count="{{$stat->stat_value}}">00</span>
-                                            <span class="plus icon-plus-1"></span>
+                                            <span class="odometer" data-count="{{$stat->stat_value}}">00</span>+
                                         </h2>
                                     </div>
                                 </div>
