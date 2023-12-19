@@ -29,6 +29,11 @@ class TestimonialStatsCrudController extends CrudController
         CRUD::setModel(\App\Models\TestimonialStats::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/testimonial-stats');
         CRUD::setEntityNameStrings('testimonial stats', 'testimonial stats');
+        CRUD::field([   // Number
+            'name'  => 'stat_value',
+            'label' => 'Stat Value',
+            'type'  => 'number',
+        ]);
     }
 
     /**
