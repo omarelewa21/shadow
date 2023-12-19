@@ -108,7 +108,7 @@
                                     @endphp
                                     <li class="services-two__list-item wow fadeInLeft" data-wow-delay="100ms"
                                         data-wow-duration="1000ms">
-                                        <div class="icon-box display-6 pl-3">
+                                        <div class="icon-box display-6" style="padding-left: 0.5rem">
                                             {!! $service->icon !!}
                                         </div>
 
@@ -125,7 +125,7 @@
                                     @endphp
                                     <li class="services-two__list-item style2 wow fadeInRight" data-wow-delay="0ms"
                                         data-wow-duration="1000ms">
-                                        <div class="icon-box display-6">
+                                        <div class="icon-box display-6" style="padding-left: 0.5rem">
                                             {!! $service->icon !!}
                                         </div>
 
@@ -145,7 +145,7 @@
                                 @endphp
                                 <li class="services-two__list-item wow fadeInLeft" data-wow-delay="100ms"
                                     data-wow-duration="1000ms">
-                                    <div class="icon-box display-6">
+                                    <div class="icon-box display-6" style="padding-right: 0.5rem">
                                         {!! $service->icon !!}
                                     </div>
 
@@ -162,7 +162,7 @@
                                 @endphp
                                 <li class="services-two__list-item style2 wow fadeInRight" data-wow-delay="0ms"
                                     data-wow-duration="1000ms">
-                                    <div class="icon-box display-6">
+                                    <div class="icon-box display-6" style="padding-right: 0.5rem">
                                         {!! $service->icon !!}
                                     </div>
 
