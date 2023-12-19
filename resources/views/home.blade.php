@@ -37,7 +37,7 @@
                                         <p>{!! $slider->description !!}</p>
                                     </div>
                                     <div class="btn-box">
-                                        <a href="#">Get In Touch</a>
+                                        <a href="{{route('contact.index')}}">Get In Touch</a>
                                     </div>
                                 </div>
 
