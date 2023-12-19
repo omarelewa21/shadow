@@ -11,3 +11,4 @@
 <x-backpack::menu-item title="Portfolio projects" icon="la la-question" :link="backpack_url('portfolio-project')" />
 <x-backpack::menu-item title="About us" icon="la la-question" :link="backpack_url('about-us')" />
 <x-backpack::menu-item title="Home sliders" icon="la la-question" :link="backpack_url('home-slider')" />
+<x-backpack::menu-item title="Home page icons" icon="la la-question" :link="backpack_url('home-page-icon')" />

@@ -26,4 +26,5 @@ Route::group([
     Route::crud('portfolio-project', 'PortfolioProjectCrudController');
     Route::crud('about-us', 'AboutUsCrudController');
     Route::crud('home-slider', 'HomeSliderCrudController');
+    Route::crud('home-page-icon', 'HomePageIconCrudController');
 }); // this should be the absolute last line of this file
