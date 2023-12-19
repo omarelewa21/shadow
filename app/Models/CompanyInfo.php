@@ -30,6 +30,8 @@ class CompanyInfo extends Model
         'company_github',
         'company_map_iframe',
         'tab_icon',
+        'home_page_service_image',
+        'home_page_youtube_link'
     ];
 
     public $timestamps = false;
