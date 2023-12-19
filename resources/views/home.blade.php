@@ -196,7 +196,7 @@
                                         </div>
                                         <div class="counter-box">
                                             <h2>
-                                                {{$stat->stat_value}}
+                                                <span class="odometer" data-count="{{$stat->stat_value}}">00</span>
                                             </h2>
                                         </div>
                                     </div>
