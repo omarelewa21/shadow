@@ -34,8 +34,8 @@
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
     <!-- template styles -->
-    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
-    <link rel="stylesheet" href="{{asset('css/responsive.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/style.css?' . time())}}" />
+    <link rel="stylesheet" href="{{asset('css/responsive.css?' . time())}}" />
     @stack('styles')
 </head>
 
