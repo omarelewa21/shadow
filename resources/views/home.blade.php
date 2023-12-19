@@ -283,11 +283,9 @@
         <div class="auto-container">
             <div class="brand-one__inner">
                 <ul>
-                    @foreach ($projects as $project)
+                    @foreach ($galleryIcons as $icon)
                         <li class="col-2">
-                            <a style="width: 100%" href="{{$project->link}}">
-                                <img src="/storage/{{$project->banner}}" alt="{{$project->title}}">
-                            </a>
+                            <img src="/storage/{{$icon}}" alt="">
                         </li>
                     @endforeach
                 </ul>
