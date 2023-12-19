@@ -56,7 +56,7 @@
                                 <div class="gallery-two__single">
                                     <div class="gallery-two__single-img">
                                         <div class="inner">
-                                            <img src="{{$teamMember->image}}" alt="{{$teamMember->name}}">
+                                            <img src="/storage/{{$teamMember->image}}" alt="{{$teamMember->name}}">
                                             <div class="overlay-content">
                                                 <h3 style="color: black; margin-bottom:10px;">{{$teamMember->name}}</h3>
                                                 <p>{{$teamMember->position}}</p>
