@@ -14,6 +14,8 @@ class TestimonialStats extends Model
     protected $fillable = [
         'stat_name',
         'stat_value',
+        'add_plus_sign',
+        'add_k_char',
     ];
 
     

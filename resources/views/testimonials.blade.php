@@ -123,7 +123,9 @@
                                     </div>
                                     <div class="counter-box">
                                         <h2>
-                                            <span class="odometer" data-count="{{$stat->stat_value}}">00</span>+
+                                            <span class="odometer" data-count="{{$stat->stat_value}}">00</span>
+                                            @if ($stat->add_k_char) <span class="k">k</span> @endif
+                                            @if($stat->add_plus_sign) <span class="plus icon-plus-1"></span> @endif
                                         </h2>
                                     </div>
                                 </div>

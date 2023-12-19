@@ -25,7 +25,10 @@ class TestimonialStatsRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'stat_name'     => 'required',
+            'stat_value'    => 'required|numeric|min:0|max:255',
+            'add_plus_sign' => 'boolean',
+            'add_k_char'    => 'boolean',
         ];
     }
 
