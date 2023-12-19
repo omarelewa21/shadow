@@ -19,6 +19,9 @@ class Service extends Model
         'service_main_banner',
         'service_second_banner',
         'service_third_banner',
+        'icon',
+        'home_description',
+        'fixed_in_home_page',
     ];
 
     protected $appends = [
