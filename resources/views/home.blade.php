@@ -114,7 +114,7 @@
 
                                         <div class="content-box">
                                             <h2><a href="#">{{$service->service_title}}</a></h2>
-                                            <p>{{$service->home_description}}</p>
+                                            <p>{!! $service->home_description !!}</p>
                                         </div>
                                     </li>
                                 @endif
