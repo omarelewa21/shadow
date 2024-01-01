@@ -287,7 +287,7 @@
                 <ul>
                     @foreach ($galleryIcons as $icon)
                         <li class="col-2">
-                            <img src="/storage/{{$icon}}" alt="">
+                            <img src="/storage/{{$icon->gallery_icon}}" alt="">
                         </li>
                     @endforeach
                 </ul>
