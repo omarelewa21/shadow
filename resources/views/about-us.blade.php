@@ -23,7 +23,7 @@
                 <ul class="row">
                     @foreach ($projects as $project)
                         <li class="col-2">
-                            <a style="width: 100%" href="{{$project->link}}">
+                            <a style="width: 100%" href="{{$project->link ?? '#'}}">
                                 <img src="/storage/{{$project->banner}}" alt="{{$project->title}}">
                             </a>
                         </li>

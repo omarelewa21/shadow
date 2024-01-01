@@ -27,7 +27,7 @@ class PortfolioProjectRequest extends FormRequest
         return [
             'banner'        => 'image|mimes:png,jpg,jpeg|max:2048',
             'title'         => 'required|string|max:255',
-            'link'          => 'required',
+            'link'          => 'string|nullable|max:255',
         ];
     }
 

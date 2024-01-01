@@ -30,7 +30,7 @@
             <div class="row">
                 @foreach ($projects as $project)
                     <!--Start Gallery Two Single-->
-                    <a href="{{$project->link}}" class="col-xl-4 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.1s">
+                    <a href="{{$project->link ?? '#'}}" class="col-xl-4 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.1s">
                         <div class="gallery-two__single">
                             <div class="gallery-two__single-img">
                                 <div class="inner">
