@@ -897,7 +897,7 @@ img {
   border-radius: 50%;
   margin: 0 auto 45px auto;
 
-  animation-name: zoomInOut;
+  /* animation-name: zoomInOut;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -920,7 +920,7 @@ img {
   -o-animation-name: zoomInOut;
   -o-animation-duration: 3s;
   -o-animation-iteration-count: infinite;
-  -o-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out; */
 }
 
 .handle-preloader .animation-preloader .txt-loading {
@@ -1006,7 +1006,7 @@ animation: spinner 1s infinite linear;
 }
 
 .handle-preloader .animation-preloader .spinner {
-  border: 3px solid #ffffff;
+  /* border: 3px solid #ffffff; */
   /**border-top-color: rgba(255, 255, 255, 0.5); **/
 }
 
@@ -1014,7 +1014,7 @@ animation: spinner 1s infinite linear;
 /* Animation preloader */
 @keyframes spinner {
   to {
-    transform: rotateZ(360deg);
+    /* transform: rotateZ(360deg); */
   }
 }
 

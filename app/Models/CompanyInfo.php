@@ -31,7 +31,8 @@ class CompanyInfo extends Model
         'company_map_iframe',
         'tab_icon',
         'home_page_service_image',
-        'home_page_youtube_link'
+        'home_page_youtube_link',
+        'preloader_page_animation'
     ];
 
     public $timestamps = false;

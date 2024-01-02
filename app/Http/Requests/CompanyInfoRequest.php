@@ -41,6 +41,7 @@ class CompanyInfoRequest extends FormRequest
             'tab_icon'          => 'image|mimes:jpeg,png,jpg|max:2048',
             'home_page_service_image' => 'image|mimes:jpeg,png,jpg|max:2048',
             'home_page_youtube_link'  => 'string',
+            'preloader_page_animation' => 'image|mimes:gif|max:2048',
         ];
     }
 

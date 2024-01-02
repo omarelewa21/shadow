@@ -46,7 +46,9 @@
             <div class="preloader-close">x</div>
             <div id="handle-preloader" class="handle-preloader">
                 <div class="animation-preloader">
-                    <div class="spinner"></div>
+                    <div class="spinner">
+                        <img src="/storage/{{$companyInfo->preloader_page_animation}}" alt="" srcset="">
+                    </div>
                     <div class="txt-loading">
                         @foreach($appName as $char)
                             <span data-text-preloader="{{$char}}" class="letters-loading">{{$char}}</span>
