@@ -2,6 +2,7 @@
     @push('styles')
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
         #iconCarousel .carousel-inner .item .col-sm-2 {
             width: 20%; /* For 5 items per slide */
             float: left;
@@ -11,6 +12,7 @@
             max-width: 100%; /* Ensure images take full width of the column */
             height: auto; /* Maintain aspect ratio */
         }
+    </style>
     @endpush
     <!--Start Main Slider Two-->
     <section class="main-slider main-slider-two">
@@ -298,7 +300,7 @@
         <div class="auto-container">
             <div id="iconCarousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                    @foreach ($galleryIcons->chunk(4) as $index => $chunk)
+                    @foreach ($galleryIcons->chunk($iconsChunkCount) as $index => $chunk)
                         <div class="item {{ $index == 0 ? 'active' : '' }}">
                             <div class="d-flex flex-row justify-content-around">
                                 @foreach ($chunk as $icon)

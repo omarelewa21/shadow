@@ -23,6 +23,7 @@ class HomeController extends Controller
         $sliders = HomeSlider::all();
         $companyInfo = CompanyInfo::select('home_page_service_image', 'home_page_youtube_link')->first();
         $galleryIcons = HomePageIcon::inRandomOrder()->get();
-        return view('home', compact('stats', 'projects', 'testimonials', 'team', 'services', 'sliders', 'companyInfo', 'galleryIcons'));
+        $iconsChunkCount = ceil($galleryIcons->count() / 2);
+        return view('home', compact('stats', 'projects', 'testimonials', 'team', 'services', 'sliders', 'companyInfo', 'galleryIcons', 'iconsChunkCount'));
     }
 }
