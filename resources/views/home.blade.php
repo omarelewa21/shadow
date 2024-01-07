@@ -1,4 +1,17 @@
 <x-base :title="'Home'">
+    @push('styles')
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        #iconCarousel .carousel-inner .item .col-sm-2 {
+            width: 20%; /* For 5 items per slide */
+            float: left;
+        }
+        
+        #iconCarousel .carousel-inner .item img {
+            max-width: 100%; /* Ensure images take full width of the column */
+            height: auto; /* Maintain aspect ratio */
+        }
+    @endpush
     <!--Start Main Slider Two-->
     <section class="main-slider main-slider-two">
         <div class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,
@@ -283,17 +296,29 @@
     <!--Start Brand One -->
     <section class="brand-one brand-one--two">
         <div class="auto-container">
-            <div class="brand-one__inner">
-                <ul>
-                    @foreach ($galleryIcons as $icon)
-                        <li class="col-2">
-                            <img src="/storage/{{$icon->gallery_icon}}" alt="">
-                        </li>
+            <div id="iconCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    @foreach ($galleryIcons->chunk(4) as $index => $chunk)
+                        <div class="item {{ $index == 0 ? 'active' : '' }}">
+                            <div class="d-flex flex-row justify-content-around">
+                                @foreach ($chunk as $icon)
+                                    <div>
+                                        <img width="150" height="150" src="/storage/{{ $icon->gallery_icon }}" alt="" class="img-responsive">
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
                     @endforeach
-                </ul>
+                </div>
+                <a class="left carousel-control" href="#iconCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#iconCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
             </div>
         </div>
-    </section>
+    </section>    
     <!--End Brand One -->
 
     <!--Start Testimonials Two -->
@@ -455,4 +480,18 @@
         </div>
     </section>
     <!--End Slogan One -->
+    @push('scripts')
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- Bootstrap JS -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#iconCarousel').carousel({
+                    interval: 4000 // Adjust the interval as needed
+                });
+            });
+        </script>
+    @endpush
 </x-base>
