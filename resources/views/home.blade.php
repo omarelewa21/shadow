@@ -200,27 +200,25 @@
         <div class="auto-container">
             <div class="counter-two__inner">
                 <div class="counter-two__inner-box">
-                    <div class="row">
+                    <div class="d-flex flex-row justify-content-around">
                         @foreach ($stats as $index=>$stat)
                             <!--Start Counter Two Single-->
-                            <div class="col-xl-3 col-lg-6 col-md-6">
-                                <div class="counter-two__single">
-                                    <div class="counter-two__single-top">
-                                        <div class="count-box">
-                                            {{$index + 1}}.
-                                        </div>
-                                        <div class="counter-box">
-                                            <h2>
-                                                <span class="odometer" data-count="{{$stat->stat_value}}">00</span>
-                                                @if ($stat->add_k_char) <span class="k">k</span> @endif
-                                                @if($stat->add_plus_sign) <span class="plus icon-plus-1"></span> @endif
-                                            </h2>
-                                        </div>
+                            <div class="counter-two__single">
+                                <div class="counter-two__single-top">
+                                    <div class="count-box">
+                                        {{$index + 1}}.
                                     </div>
+                                    <div class="counter-box">
+                                        <h2>
+                                            <span class="odometer" data-count="{{$stat->stat_value}}">00</span>
+                                            @if ($stat->add_k_char) <span class="k">k</span> @endif
+                                            @if($stat->add_plus_sign) <span class="plus icon-plus-1"></span> @endif
+                                        </h2>
+                                    </div>
+                                </div>
 
-                                    <div class="counter-two__single-bottom">
-                                        <p>{{$stat->stat_name}}</p>
-                                    </div>
+                                <div class="counter-two__single-bottom">
+                                    <p>{{$stat->stat_name}}</p>
                                 </div>
                             </div>
                         <!--End Counter Two Single-->
