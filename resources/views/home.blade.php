@@ -273,7 +273,7 @@
 
                                 @foreach ($projects as $project)
                                 <!--Start Gallery Two Single-->
-                                <a href="{{$project->link ?? '#'}}" class="col-xl-4 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.1s">
+                                <a href="{{$project->link ?? '#'}}" class="wow animated fadeInUp" data-wow-delay="0.1s">
                                     <div class="gallery-two__single">
                                         <div class="gallery-two__single-img">
                                             <div class="inner">
@@ -300,12 +300,12 @@
         <div class="auto-container">
             <div id="iconCarousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                    @foreach ($galleryIcons->chunk($iconsChunkCount) as $index => $chunk)
+                    @foreach ($galleryIcons->chunk(5) as $index => $chunk)
                         <div class="item {{ $index == 0 ? 'active' : '' }}">
-                            <div class="d-flex flex-row justify-content-around">
+                            <div class="d-flex flex-row justify-content-around" style="height: 130px">
                                 @foreach ($chunk as $icon)
                                     <div>
-                                        <img width="150" height="150" src="/storage/{{ $icon->gallery_icon }}" alt="" class="img-responsive">
+                                        <img src="/storage/{{ $icon->gallery_icon }}" alt="" class="img-responsive">
                                     </div>
                                 @endforeach
                             </div>
