@@ -302,7 +302,7 @@
                         <div class="item {{ $index == 0 ? 'active' : '' }}">
                             <div class="d-flex flex-row justify-content-around" style="height: 130px">
                                 @foreach ($chunk as $icon)
-                                    <div>
+                                    <div class="d-flex align-items-center">
                                         <img src="/storage/{{ $icon->gallery_icon }}" alt="" class="img-responsive">
                                     </div>
                                 @endforeach
