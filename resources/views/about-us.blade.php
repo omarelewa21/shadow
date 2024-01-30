@@ -66,7 +66,7 @@
                                 <p>{{$aboutUs->advantage_description}}</p>
 
                                 <div class="btn-box">
-                                    <a class="thm-btn" href="{{route('protfolio')}}">
+                                    <a class="thm-btn" href="{{route('portfolio')}}">
                                         <span class="txt">View More</span>
                                         <span class="bdrl"></span>
                                         <span class="bdrr"></span>

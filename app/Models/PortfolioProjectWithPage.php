@@ -24,7 +24,7 @@ class PortfolioProjectWithPage extends Model
         'twitter_link',
         'facebook_link',
         'instagram_link',
-        'behance_link',
+        'pinterest_link',
     ];
     
     public function images()

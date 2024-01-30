@@ -22,7 +22,7 @@ class PortfolioController extends Controller
 
         $nextProject = PortfolioProjectWithPage::when(
             $project->id == PortfolioProjectWithPage::latest()->value('id'),
-            fn ($query) => $query->whereId('id', 1),
+            fn ($query) => $query->whereId(1),
             fn ($query) => $query->whereId($project->id + 1)
         )->first();
 

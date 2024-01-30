@@ -29,7 +29,7 @@ Route::get('/service/{service}', [ServiceController::class, 'show'])->name('serv
 Route::get('/team', [TeamController::class, 'index'])->name('team');
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 Route::get('/testimonials', [TestimonialsController::class, 'index'])->name('testimonials');
-Route::get('/protfolio', [PortfolioController::class, 'index'])->name('protfolio');
-Route::get('/protfolio/{project}', [PortfolioController::class, 'show'])->name('protfolio.show');
+Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
+Route::get('/portfolio/{project}', [PortfolioController::class, 'show'])->name('portfolio.show');
 Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
 Route::fallback(fn () => redirect()->route('home'));

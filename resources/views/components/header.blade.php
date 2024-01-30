@@ -38,7 +38,7 @@
                                 <li class="dropdown">
                                     <a href="#">Pages</a>
                                     <ul>
-                                        <li><a href="{{route('protfolio')}}">Portfolio</a></li>
+                                        <li><a href="{{route('portfolio')}}">Portfolio</a></li>
                                         <li><a href="{{route('team')}}">Team</a></li>
                                         <li><a href="{{route('testimonials')}}">Testimonial</a></li>
                                         <li><a href="{{route('faq')}}">Faq</a></li>
