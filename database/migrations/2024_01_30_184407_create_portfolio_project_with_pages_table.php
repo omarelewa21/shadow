@@ -18,14 +18,14 @@ return new class extends Migration
             $table->string('background_banner');
             $table->string('main_banner');
             $table->string('contact_banner');
-            $table->string('client_name');
-            $table->string('category');
-            $table->string('project_date');
+            $table->string('client_name')->nullable();
+            $table->string('category')->nullable();
+            $table->string('project_date')->nullable();
             $table->text('project_overview');
-            $table->string('twitter_link');
-            $table->string('facebook_link');
-            $table->string('instagram_link');
-            $table->string('behance_link');
+            $table->string('twitter_link')->nullable();
+            $table->string('facebook_link')->nullable();
+            $table->string('instagram_link')->nullable();
+            $table->string('behance_link')->nullable();
             $table->timestamps();
         });
     }
