@@ -2,13 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PortfolioProject;
 use App\Models\PortfolioProjectWithPage;
 
 class PortfolioController extends Controller
 {
     public function index()
     {
-        $projects = \App\Models\PortfolioProject::all();
+        $projects = PortfolioProjectWithPage
+            ::selectRaw("
+                home_banner as banner,
+                home_title as title,
+                CONCAT('/portfolio/',id)  as link
+            ")
+            ->union(PortfolioProject::select('banner', 'title', 'link'))
+            ->get();
         return view('portfolio', compact('projects'));
     }
 

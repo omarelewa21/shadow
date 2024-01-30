@@ -6,6 +6,7 @@ use App\Models\CompanyInfo;
 use App\Models\HomePageIcon;
 use App\Models\HomeSlider;
 use App\Models\PortfolioProject;
+use App\Models\PortfolioProjectWithPage;
 use App\Models\Service;
 use App\Models\TeamMember;
 use App\Models\Testimonial;
@@ -16,7 +17,14 @@ class HomeController extends Controller
     public function home()
     {
         $stats = TestimonialStats::all();
-        $projects = PortfolioProject::all();
+        $projects = PortfolioProjectWithPage
+            ::selectRaw("
+                home_banner as banner,
+                home_title as title,
+                CONCAT('/portfolio/',id)  as link
+            ")
+            ->union(PortfolioProject::select('banner', 'title', 'link'))
+            ->get();
         $testimonials = Testimonial::limit(3)->get();
         $team = TeamMember::where('fixed_in_about_page', true)->limit(4)->get();
         $services = Service::limit(4)->get();
