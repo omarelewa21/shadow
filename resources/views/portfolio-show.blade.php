@@ -104,45 +104,19 @@
         <div class="container">
             <div class="row">
                 <!--Start Portfolio One Single-->
-                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="portfolio-one__single">
-                        <div class="inner">
-                            <img src="assets/images/project/portfolio-v1-img1.jpg" alt="">
-                            <div class="portfolio-one__link">
-                                <a class="img-popup" href="assets/images/project/portfolio-v1-img1.jpg"><span
-                                        class="icon-plus-1"></span></a>
+                @foreach ($project->images as $image)
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="portfolio-one__single">
+                            <div class="inner">
+                                <img src="{{asset('storage/'.$image->image)}}" alt="">
+                                <div class="portfolio-one__link">
+                                    <a class="img-popup" href="{{asset('storage/'.$image->image)}}"><span
+                                            class="icon-plus-1"></span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--End Portfolio One Single-->
-
-                <!--Start Portfolio One Single-->
-                <div class="col-xl-4 col-lg-4 wow fadeInDown" data-wow-delay=".3s">
-                    <div class="portfolio-one__single">
-                        <div class="inner">
-                            <img src="assets/images/project/portfolio-v1-img2.jpg" alt="">
-                            <div class="portfolio-one__link">
-                                <a class="img-popup" href="assets/images/project/portfolio-v1-img2.jpg"><span
-                                        class="icon-plus-1"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End Portfolio One Single-->
-
-                <!--Start Portfolio One Single-->
-                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="portfolio-one__single">
-                        <div class="inner">
-                            <img src="assets/images/project/portfolio-v1-img3.jpg" alt="">
-                            <div class="portfolio-one__link">
-                                <a class="img-popup" href="assets/images/project/portfolio-v1-img3.jpg"><span
-                                        class="icon-plus-1"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
                 <!--End Portfolio One Single-->
             </div>
         </div>
