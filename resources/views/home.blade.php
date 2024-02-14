@@ -200,7 +200,7 @@
         <div class="auto-container">
             <div class="counter-two__inner">
                 <div class="counter-two__inner-box">
-                    <div class="d-flex flex-row justify-content-around">
+                    <div class="d-flex flex-row flex-wrap justify-content-around">
                         @foreach ($stats as $index=>$stat)
                             <!--Start Counter Two Single-->
                             <div class="counter-two__single">
