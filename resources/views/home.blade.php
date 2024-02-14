@@ -364,7 +364,7 @@
                             @foreach ($testimonials as $index=>$testimonial)
                                 <li class="testimonials-two__right-list-item wow animated fadeInRight"
                                     data-wow-delay="0.1s">
-                                    <div class="testimonials-two__right-list-left">
+                                    <div class="testimonials-two__right-list-left" style="margin-right: 4rem">
                                         <div class="count-box">{{$index+1}}.</div>
                                         <div class="title-box">
                                             <h2><span>{{$testimonial->client_name}}</span></h2>
