@@ -22,9 +22,9 @@
     <div class="portfolio-details">
         <div class="container">
             <div class="portfolio-details__inner">
-                <div class="portfolio-details__img1">
+                {{-- <div class="portfolio-details__img1">
                     <img src="/storage/{{$project->main_banner}}" alt="main banner">
-                </div>
+                </div> --}}
 
                 <div class="portfolio-details__text1">
                     <div class="row">
