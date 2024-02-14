@@ -105,7 +105,7 @@
             <div class="row">
                 <!--Start Portfolio One Single-->
                 @foreach ($project->images as $image)
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-xl-12 col-lg-12 wow fadeInUp" data-wow-delay=".3s">
                         <div class="portfolio-one__single">
                             <div class="inner">
                                 <img src="{{asset('storage/'.$image->image)}}" alt="">
