@@ -20,9 +20,9 @@
                                     <a href="{{route('home')}}">Home</a>
                                 </li>
 
-                                <li>
+                                {{-- <li>
                                     <a href="{{route('about-us')}}">About</a>
-                                </li>
+                                </li> --}}
 
                                 <li class="dropdown">
                                     <a href="{{$services->isNotEmpty() ? route('service.show', $services->first()->id) : '#'}}">Services</a>
