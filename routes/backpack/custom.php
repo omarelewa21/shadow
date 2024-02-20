@@ -24,7 +24,7 @@ Route::group([
     Route::crud('testimonial', 'TestimonialCrudController');
     Route::crud('testimonial-stats', 'TestimonialStatsCrudController');
     Route::crud('portfolio-project', 'PortfolioProjectCrudController');
-    // Route::crud('about-us', 'AboutUsCrudController');
+    Route::crud('about-us', 'AboutUsCrudController');
     Route::crud('home-slider', 'HomeSliderCrudController');
     Route::crud('home-page-icon', 'HomePageIconCrudController');
     Route::crud('portfolio-project-with-page', 'PortfolioProjectWithPageCrudController');
