@@ -100,7 +100,7 @@
                                 <img src="/storage/{{$companyInfo->home_page_service_image}}" alt="Main">
                             </div>
 
-                            <div class="services-two__video">
+                            {{-- <div class="services-two__video">
                                 <div class="video-box">
                                     <a class="video-popup" title="Video Gallery"
                                         href="{{$companyInfo->home_page_youtube_link}}"
@@ -113,7 +113,7 @@
                                 <div class="title-box">
                                     <h3>Watch Video</h3>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
 
                             <ul class="services-two__list">
