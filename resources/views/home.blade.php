@@ -7,7 +7,7 @@
             width: 20%; /* For 5 items per slide */
             float: left;
         }
-        
+
         #iconCarousel .carousel-inner .item img {
             max-width: 100%; /* Ensure images take full width of the column */
             height: auto; /* Maintain aspect ratio */
@@ -100,10 +100,10 @@
                                 <img src="/storage/{{$companyInfo->home_page_service_image}}" alt="Main">
                             </div>
 
-                            {{-- <div class="services-two__video">
+                            <div class="services-two__video">
                                 <div class="video-box">
                                     <a class="video-popup" title="Video Gallery"
-                                        href="{{$companyInfo->home_page_youtube_link}}"
+                                        href="https://player.vimeo.com/video/944675238?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                                         style="visibility: visible;">
                                         <i class="icon-play-button-1" aria-hidden="true"></i>
                                         <span class="ripple"></span>
@@ -113,7 +113,7 @@
                                 <div class="title-box">
                                     <h3>Watch Video</h3>
                                 </div>
-                            </div> --}}
+                            </div>
                         </div>
 
                             <ul class="services-two__list">
@@ -150,7 +150,7 @@
                                         </div>
                                     </li>
                                 @endif
-                                
+
                             </ul>
 
                         <ul class="services-two__list style2">
@@ -318,7 +318,7 @@
                 </a>
             </div>
         </div>
-    </section>    
+    </section>
     <!--End Brand One -->
 
     <!--Start Testimonials Two -->
