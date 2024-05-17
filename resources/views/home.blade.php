@@ -103,7 +103,7 @@
                             <div class="services-two__video">
                                 <div class="video-box">
                                     <a class="video-popup" title="Video Gallery"
-                                        href="https://player.vimeo.com/video/944675238"
+                                        href="https://player.vimeo.com/video/944675238?portrait=0&byline=0&title=0&actions=0&vimeo_logo=0"
                                         style="visibility: visible;">
                                         <i class="icon-play-button-1" aria-hidden="true"></i>
                                         <span class="ripple"></span>
