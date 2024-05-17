@@ -103,7 +103,7 @@
                             <div class="services-two__video">
                                 <div class="video-box">
                                     <a class="video-popup" title="Video Gallery"
-                                        href="https://player.vimeo.com/video/944675238?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                                        href="https://player.vimeo.com/video/944675238"
                                         style="visibility: visible;">
                                         <i class="icon-play-button-1" aria-hidden="true"></i>
                                         <span class="ripple"></span>
