@@ -33,4 +33,9 @@ class HomeController extends Controller
         $galleryIcons = HomePageIcon::inRandomOrder()->get();
         return view('home', compact('stats', 'projects', 'testimonials', 'team', 'services', 'sliders', 'companyInfo', 'galleryIcons'));
     }
+
+    public function privacyPolicy()
+    {
+        return view('privacy-policy');
+    }
 }

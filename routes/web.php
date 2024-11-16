@@ -31,5 +31,6 @@ Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 Route::get('/testimonials', [TestimonialsController::class, 'index'])->name('testimonials');
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 Route::get('/portfolio/{project}', [PortfolioController::class, 'show'])->name('portfolio.show');
+Route::get('/privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacy-policy');
 // Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
 Route::fallback(fn () => redirect()->route('home'));
