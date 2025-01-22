@@ -54,6 +54,7 @@
                         <li><a href="{{route('portfolio')}}">Portfolio</a></li>
                         <li><a href="{{route('service.show', 1)}}">Services</a></li>
                         <li><a href="{{route('privacy-policy')}}">Privacy Policy</a></li>
+                        <li><a href="{{route('help')}}">Help</a></li>
                     </ul>
                 </div>
 

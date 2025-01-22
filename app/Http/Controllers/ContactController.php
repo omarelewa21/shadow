@@ -33,4 +33,10 @@ class ContactController extends Controller
             'message'   => 'Your message has been sent successfully. We will contact you soon.'
         ]);
     }
+
+    public function help()
+    {
+        $companyInfo = CompanyInfo::first();
+        return view('help', compact('companyInfo'));
+    }
 }
